@@ -23,8 +23,8 @@ COMANDS_AT_GENERALS = [
 COMANDS_AT_MQTT = [
     'AT+SMCONF="CLIENTID","mqttx_7"',
     'AT+SMCONF="URL","dev-mqtt.senfio.com.br","1883"',
-    f'AT+SMCONF="USERNAME","{os.environ["MQTT_USERNAME"]}"',
-    f'AT+SMCONF="PASSWORD","{os.environ["MQTT_PASSWORD"]}"',
+    f'AT+SMCONF="USERNAME","{os.environ.get("MQTT_USERNAME")}"',
+    f'AT+SMCONF="PASSWORD","{os.environ.get("MQTT_PASSWORD")}"',
     'AT+SMCONN',
     'AT+SMUNSUB="senfio/monitore/explorer/jiga/+"',
     'AT+SMSUB="senfio/monitore/explorer/jiga/+",1',
